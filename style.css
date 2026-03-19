@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  background: #f5f7fa;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+header {
+  background: white;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.date {
+  font-size: 13px;
+  color: #777;
+}
+
+main {
+  padding: 12px;
+  padding-bottom: 80px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.card {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e5e5;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+}
+
+.timer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+#timerDisplay {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1f7a8c;
+}
+
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.tabbar button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #555;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.big-number {
+  font-size: 40px;
+  text-align: center;
+  color: #1f7a8c;
+}
+

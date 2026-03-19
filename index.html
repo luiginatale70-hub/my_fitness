@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>My Fitness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>My Fitness</h1>
+    <div id="todayLabel" class="date"></div>
+  </header>
+
+  <main>
+    <!-- OGGI -->
+    <section id="tab-oggi" class="tab-content active">
+      <h2 class="section-title">Agenda di oggi</h2>
+
+      <div class="card">
+        <div class="card-title">Colazione</div>
+        <label><input type="checkbox" data-key="breakfastDone"> Fatto</label>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Pranzo (ufficio)</div>
+        <label><input type="checkbox" data-key="lunchDone"> Fatto</label>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Pre‑workout</div>
+        <label><input type="checkbox" data-key="preWorkoutDone"> Fatto</label>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Allenamento</div>
+        <label><input type="checkbox" data-key="workoutDone"> Completato</label>
+
+        <div class="timer">
+          <span id="timerDisplay">01:30</span>
+          <button id="btnStartTimer">Start</button>
+          <button id="btnResetTimer">Reset</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Post‑workout</div>
+        <label><input type="checkbox" data-key="postWorkoutDone"> Fatto</label>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Cena</div>
+        <label><input type="checkbox" data-key="dinnerDone"> Fatto</label>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Ricetta per domani</div>
+        <input id="tomorrowRecipeInput" placeholder="Scrivi qui...">
+      </div>
+
+      <div class="card">
+        <div class="card-title">Note</div>
+        <textarea id="dailyNotes"></textarea>
+      </div>
+    </section>
+
+    <!-- ALLENAMENTO -->
+    <section id="tab-allenamento" class="tab-content">
+      <h2 class="section-title">Scheda palestra</h2>
+
+      <div class="card">
+        <div class="card-title">Giorno A – Petto + Schiena</div>
+        <p>Superset Chest Press + Lat Machine, Multi Press + Rematore, croci, pulldown.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Giorno B – Gambe</div>
+        <p>Leg extension, squat/goblet, affondi, hip thrust, polpacci.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Giorno C – Spalle + Braccia</div>
+        <p>Lento avanti, alzate laterali, curl, pushdown, curl martello, french press.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Giorno D – Full body</div>
+        <p>Multi press, lat machine, leg extension, chest press, superset braccia.</p>
+      </div>
+    </section>
+
+    <!-- CIBO -->
+    <section id="tab-cibo" class="tab-content">
+      <h2 class="section-title">Ricette</h2>
+
+      <div class="card">
+        <div class="card-title">Kentucky Salad light</div>
+        <p>Insalata + pollo alla piastra + salsa yogurt.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Bowl pollo e riso</div>
+        <p>Perfetta per pranzo in ufficio.</p>
+      </div>
+    </section>
+
+    <!-- PROGRESSI -->
+    <section id="tab-progressi" class="tab-content">
+      <h2 class="section-title">Progressi</h2>
+
+      <div class="card">
+        <div class="card-title">Inserisci dati</div>
+        <input id="weightInput" type="number" placeholder="Peso (kg)">
+        <input id="bodyFatInput" type="number" placeholder="% massa grassa">
+        <button id="btnSaveWeight">Salva</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Ultimo dato</div>
+        <div id="lastProgress">Nessun dato.</div>
+      </div>
+    </section>
+
+    <!-- BAGNO -->
+    <section id="tab-bagno" class="tab-content">
+      <h2 class="section-title">Bagno</h2>
+
+      <div class="card">
+        <div class="card-title">Contatore</div>
+        <div id="bathCounter" class="big-number">0</div>
+        <button id="btnBathPlus">+1</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <button data-tab="oggi">📅 Oggi</button>
+    <button data-tab="allenamento">🏋️ Allenamento</button>
+    <button data-tab="cibo">🍽️ Cibo</button>
+    <button data-tab="progressi">📈 Progressi</button>
+    <button data-tab="bagno">🚽 Bagno</button>
+  </nav>
+</body>
+</html>
+

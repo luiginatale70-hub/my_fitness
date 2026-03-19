@@ -1,0 +1,9 @@
+{
+  "name": "My Fitness",
+  "short_name": "MyFitness",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}
+
